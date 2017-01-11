@@ -28,7 +28,6 @@ export class Bot {
 
     let url = util.format("https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%s&text=%s&page=1&format=json&nojsoncallback=1&sort=relevance", process.env.API_KEY, encodeURIComponent(text));
 
-
     request.get(url, (error, response, body)=>{
         let photos = JSON.parse(body).photos;
 
