@@ -15,16 +15,34 @@ var Bot = (function () {
     Bot.prototype.execute = function (cb) {
         var args = this.args;
         var relevance = 0.0;
-        var text = "cat";
-        for (var _i = 0, _a = args.entities; _i < _a.length; _i++) {
-            var entity = _a[_i];
-            if (parseFloat(entity.relevance) > relevance) {
-                relevance = entity.relevance;
-                text = entity.text;
+        var text = "404";
+        if (args.apiai) {
+            var result = args.apiai.result;
+            if (result.action === 'input.unknown') {
+                return cb({
+                    text: result.fulfillment.speech
+                });
+            }
+            else {
+                if (result.action === 'input.person') {
+                    var fullname = result.parameters['full-name'];
+                    if (fullname['given-name'] && fullname['last-name']) {
+                        text = util.format("%s %s", fullname['given-name'], fullname['last-name']);
+                    }
+                    else {
+                        text = fullname;
+                    }
+                }
+                else if (result.action === 'input.place') {
+                    text = result.parameters['geo-city'];
+                }
             }
         }
         var url = util.format("https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%s&text=%s&page=1&format=json&nojsoncallback=1&sort=relevance", process.env.API_KEY, encodeURIComponent(text));
         request.get(url, function (error, response, body) {
+            if (error) {
+                throw error;
+            }
             var photos = JSON.parse(body).photos;
             if (photos && photos.photo.length > 0) {
                 var photo = photos.photo[0];

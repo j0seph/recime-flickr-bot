@@ -17,20 +17,40 @@ export class Bot {
     let args = this.args;
     var relevance = 0.0;
 
-    var text = "cat";
+    var text = "404";
 
-    for (let entity of args.entities){
-        if (parseFloat(entity.relevance) > relevance){
-            relevance = entity.relevance;
-            text = entity.text;
+    if (args.apiai){
+        let result  = args.apiai.result;
+
+        if (result.action === 'input.unknown'){
+          return cb({
+              text : result.fulfillment.speech
+          });
+        } else {
+          if (result.action === 'input.person'){
+              let fullname = result.parameters['full-name'];
+
+              if (fullname['given-name'] && fullname['last-name']){
+                text = util.format("%s %s", fullname['given-name'], fullname['last-name']);
+              }
+              else{
+                  text = fullname;
+              }
+          }
+          else if (result.action === 'input.place'){
+              text = result.parameters['geo-city'];
+          }
         }
     }
 
     let url = util.format("https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%s&text=%s&page=1&format=json&nojsoncallback=1&sort=relevance", process.env.API_KEY, encodeURIComponent(text));
 
     request.get(url, (error, response, body)=>{
-        let photos = JSON.parse(body).photos;
+        if (error){
+          throw error;
+        }
 
+        let photos = JSON.parse(body).photos;
 
         if (photos && photos.photo.length > 0){
           let photo = photos.photo[0];

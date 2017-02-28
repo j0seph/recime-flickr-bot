@@ -1,21 +1,21 @@
 {
-	"author": "Recime Inc <hello@recime.ai>",
-	"dependencies": {
-		"request": "^2.76.0"
-	},
-	"description": "Flickr interesting photos",
-	"keywords": [
-		"Recime",
-		"Bot"
-	],
-	"license": "MIT",
-	"main": "main.js",
-	"name": "flickr-photos",
-	"private": true,
-	"scripts": {
-		"build": "tsc",
-		"preinstall": "npm install -g typescript"
-	},
-	"title": "Flickr Photos",
-	"version": "1.0.1"
+  "author": "Recime Inc <hello@recime.ai>",
+  "dependencies": {
+    "request": "^2.76.0"
+  },
+  "description": "Flickr interesting photos",
+  "keywords": [
+    "Recime",
+    "Bot"
+  ],
+  "license": "MIT",
+  "main": "main.js",
+  "name": "flickr-photos",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "preinstall": "npm install -g typescript"
+  },
+  "title": "Flickr Photos",
+  "version": "1.0.1"
 }
