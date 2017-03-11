@@ -1,7 +1,6 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var util = require("util");
-var request = require("request");
+var util = require('util');
+var request = require('request');
 var Bot = (function () {
     function Bot(args) {
         this.args = args;
