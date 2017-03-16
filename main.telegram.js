@@ -15,15 +15,12 @@ var Bot = (function () {
     });
     Bot.prototype.execute = function (cb) {
         new flickr_request_1.FlickrRequest().send(new apiai_1.ApiAi().extract(this.args), function (result) {
-            var message = {
-                attachment: {
-                    type: "image",
-                    payload: {
-                        url: result.url
-                    }
+            cb({
+                "type": "photo",
+                "payload": {
+                    "photo": result.url
                 }
-            };
-            cb(message);
+            });
         }, function (err) {
             cb({
                 text: err

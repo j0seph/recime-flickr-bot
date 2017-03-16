@@ -1,4 +1,3 @@
-import util = require('util');
 import request = require('request');
 
 import {ApiAi} from "./apiai";
@@ -17,15 +16,12 @@ export class Bot {
 
   execute(cb:any){
     new FlickrRequest().send(new ApiAi().extract(this.args), (result)=>{
-        let message = {
-            attachment: {
-              type: "image",
-              payload: {
-                  url: result.url
-              }
+        cb({
+            "type": "photo",
+            "payload" : {
+              "photo" : result.url
             }
-        };
-        cb(message);
+        });
     }, (err)=>{
         cb({
           text : err
