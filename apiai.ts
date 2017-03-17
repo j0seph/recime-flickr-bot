@@ -24,7 +24,7 @@ export class ApiAi {
                 }
             }
         }
-        return args.message.text;
+        return "";
   }
 
 }
