@@ -25,7 +25,7 @@ var ApiAi = (function () {
                 }
             }
         }
-        return args.message.text;
+        return "";
     };
     return ApiAi;
 }());
