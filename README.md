@@ -2,9 +2,6 @@
 
 Recime Flickr Photo Bot
 
-##Installation
-
-
 __Set your flickr API_KEY__
 
 ```
