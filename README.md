@@ -1,16 +1,16 @@
 # flickr-sample-bot
 
-Flickr Photo bot
+Recime Flickr Photo Bot
 
 ### Steps to deploy the bot:
 
-* Set your flickr API_KEY:
+__Set your flickr API_KEY__
 
 ```
   recime-cli config set API_KEY=PASTE_YOUR_API_KEY
 ```
 
-* Configure Platform:
+__Configure Platform__
 
 ```
   recime-cli platform config facebook|telegram|wechat
@@ -20,8 +20,13 @@ Flickr Photo bot
 It will ask you to paste your access token.
 
 
-* Deploy:
+__Deploy__
 
 ```
   recime-cli deploy
+
 ```
+
+# License
+
+MIT (Copyright 2017 Recime Inc.)
