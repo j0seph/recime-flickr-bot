@@ -2,7 +2,8 @@
 
 Recime Flickr Photo Bot
 
-### Steps to deploy the bot:
+##Installation
+
 
 __Set your flickr API_KEY__
 
@@ -27,6 +28,6 @@ __Deploy__
 
 ```
 
-# License
+## License
 
 MIT (Copyright 2017 Recime Inc.)
