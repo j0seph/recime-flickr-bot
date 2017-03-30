@@ -1,26 +1,26 @@
 {
-  "author": "Recime Inc <hello@recime.ai>",
+  "author": "Recime Inc. <admin@recime.io>",
   "dependencies": {
-    "@types/node": "^7.0.8",
-    "@types/request": "0.0.41",
-    "request": "^2.76.0"
+    "request": "^2.81.0"
   },
-  "description": "Flickr interesting photos",
+  "description": "Flickr photo search bot.",
+  "devDependencies": {
+    "babel-cli": "6.24.0",
+    "babel-core": "6.18.2",
+    "babel-preset-es2015": "6.24.0",
+    "eslint": "^3.18.0"
+  },
   "keywords": [
     "Recime",
     "Bot"
   ],
   "license": "MIT",
   "main": "main.js",
-  "name": "flickr-photos",
+  "name": "flickr-photo-bot",
   "private": true,
   "scripts": {
-    "build": "tsc"
+    "build": "babel . -d . --ignore node_modules --presets es2015"
   },
-  "title": "Flickr Photos",
-  "version": "1.0.1",
-  "devDependencies": {
-    "@types/node": "^7.0.12",
-    "typescript": "^2.2.2"
-  }
+  "title": "Flickr Photo Bot",
+  "version": "1.0.1"
 }

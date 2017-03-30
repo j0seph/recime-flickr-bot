@@ -1,7 +1,9 @@
-import util = require('util');
+'use strict'
 
-export class ApiAi {
-  
+import util from 'util';
+
+export default class ApiAi {
+
   extract(args){
         if (args.apiai){
             let result  = args.apiai.result;
