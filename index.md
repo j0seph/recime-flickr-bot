@@ -14,7 +14,7 @@ This bot shows you images tagged in flickr for a given person or location. Examp
 "Who is Steve Jobs?" => Returns photo of Steve Jobs
 ```
 
-If you have an idea for improvement, want to fix some issues or just have an idea for a new feature, fork the git repository here:
+If you have an idea for improvement, want to fix some issues, fork the `github` repository here:
 
 <!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/Recime/recime-flickr-bot/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-aria-label="# forks on GitHub" aria-label="Fork Recime/recime-flickr-bot on GitHub">Fork on Github</a>

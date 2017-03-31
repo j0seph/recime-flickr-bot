@@ -1,5 +1,4 @@
 ---
-layout: default
 title:  "Terms of Service"
 date:   2017-03-30 17:50:00
 categories: legal
