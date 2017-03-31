@@ -4,6 +4,11 @@
     -webkit-font-smoothing: antialiased;
     background: none;
 }
+
+.page-header img {
+    width: 80px!important;
+}
+
 .project-tagline {
   color: #74b1be!important;
 }
@@ -17,7 +22,7 @@
 }
 
 .facebook img {
-  width: 30px;
+  width: 30px!important;
   padding: 2px;
 }
 
@@ -31,7 +36,7 @@
 }
 
 .telegram img {
-  width: 30px;
+  width: 30px!important;
   padding: 2px;
 }
 .telegram span {
