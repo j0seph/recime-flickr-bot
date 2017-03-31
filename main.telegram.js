@@ -19,11 +19,9 @@ export default class Bot {
 		new ApiAi().extract(this.args).then((text)=>{
 			new FlickrRequest().send(text, (result)=>{
 					let message = {
-							attachment: {
-								type: "image",
-								payload: {
-										url: result.url
-								}
+							type: "photo",
+							payload: {
+									photo: result.url
 							}
 					};
 					cb(message);
