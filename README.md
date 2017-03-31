@@ -1,6 +1,4 @@
-# flickr-sample-bot
-
-Recime Flickr Photo Bot
+# Recime Flickr Photos Bot
 
 __Set your flickr API_KEY__
 
