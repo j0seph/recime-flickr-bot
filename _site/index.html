@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  
+  <head>
+  <meta charset="UTF-8">
+  <title>Flickr Photos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/cayman.css">
+  <link rel="stylesheet" href="/css/recime.css">
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+</head>
+
+
+  <body>
+    <section class="page-header recime-page-header">
+  <h1 class="project-name">Flickr Photos</h1>
+  <h2 class="project-tagline">The bot shows you photos from flickr for a given location or person.</h2>
+  <a href="https://www.facebook.com/Flickr-Bot-769372433211496" class="btn facebook">
+    <img class="facebook-icon" src="/images/fb.png"/>
+    <span>Send message</span>
+  </a>
+  <a href="https://telegram.me/flckr_bot" class="btn telegram"><img class="facebook-icon" src="/images/telegram.png"/><span>Add to Telegram</span> </a>
+</section>
+
+
+    <section class="main-content">
+      
+      <h1 id="getting-started">Getting Started</h1>
+
+<p>This bot shows you images tagged in flickr for a given person or location. Example of messages that can be sent to it are:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"Where is San Francico?" =&gt; Returns the photo of San Francisco
+"Who is Steve Jobs?" =&gt; Returns photo of Steve Jobs
+</code></pre>
+</div>
+
+<p>If you have an idea for improvement, want to fix some issues or just have an idea for a new feature, fork the git repository here:</p>
+
+<!-- Place this tag where you want the button to render. -->
+<p><a class="github-button" href="https://github.com/Recime/recime-flickr-bot/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-aria-label="# forks on GitHub" aria-label="Fork Recime/recime-flickr-bot on GitHub">Fork on Github</a></p>
+
+<h1 id="setup">Setup</h1>
+
+<p>Once you have cloned the repo and have created configured <code class="highlighter-rouge">Recime</code> Command Line Tool. You can test it by following the instructions below:</p>
+
+<h2 id="set-flickr-api-key">Set Flickr API KEY</h2>
+
+<p>In order to make photos queries in flickr, first get your flickr API key from:<br />
+<a href="https://www.flickr.com/services/apps/create/"><code class="highlighter-rouge">https://www.flickr.com/services/apps/create/</code></a>.</p>
+
+<p>Once you have it, you can later on paste it in your search query along with the query text you have extracted from keywords</p>
+
+<p>Now, type the following command:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  recime-cli config set API_KEY=PASTE_YOUR_API_KEY
+</code></pre>
+</div>
+
+<h2 id="configure-bot-platform">Configure Bot Platform</h2>
+
+<p>Configure your bot by typing the following command:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  recime-cli platform config facebook|telegram|wechat
+
+</code></pre>
+</div>
+
+<p>Now copy/paste your platform specific Access Token you have have copied earlier.</p>
+
+<h2 id="deploy">Deploy</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  recime-cli deploy
+
+</code></pre>
+</div>
+
+<p>This will build the bot, install any missing dependencies and give you the live url of the bot:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>bash-3.2$ recime-cli deploy                                                                
+INFO: Installing dependencies.                                                                                                                                       
+&gt; alan-turing@1.0.1 preinstall /steve/bot/Turing                      
+&gt; npm install -g typescript                                                                                                                                          
+/usr/local/bin/tsc -&gt; /usr/local/lib/node_modules/typescript/bin/tsc                       
+/usr/local/bin/tsserver -&gt; /usr/local/lib/node_modules/typescript/bin/tsserver             
+/usr/local/lib                                                                             
+└── typescript@2.0.8                                                                                                                                                       
+&gt; alan-turing@1.0.1 build /Users/newrecimeuser/Source/Recime/bot/Turing                           
+&gt; tsc                                                                                                                                                                             
+INFO: Preparing.                                                                           
+INFO: Compressing.                                                                         
+INFO: Preparing to upload.                                                                 
+28.18 KB / 28.18 KB [#########################################################] 100.00% 0s
+INFO: Finalizing.                                                                          
+\                                                                                          
+=&gt; https://us-west-1-bot.recime.io/bot/50d122fd3204e67f3a6452ba28b522da/v1                                
+
+INFO: Bot publish successful.                                                                                                                                           
+For any questions and feedback, please reach us at hello@recime.io.                                                                                            
+bash-3.2$
+
+</code></pre>
+</div>
+
+<p>Make sure to save your bot URL. After you have successfully deployed the bot, it is time to execute it.</p>
+
+<p>Please check out the <a href="https://docs.recime.io">Recime Documenation</a> on how to get your free account, build and deploy your first bot.</p>
+
+
+      <footer class="site-footer">
+  <span class="site-footer-owner"><a href="http://localhost:4000">Flickr Photos</a> is maintained by <a href="https://recime.io">Recime Inc</a>.</span>
+</footer>
+
+
+    </section>
+
+  </body>
+</html>

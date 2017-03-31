@@ -1,0 +1,40 @@
+.page-header {
+    color: #74b1be;
+    background-color: #2b2e3b !important;
+    -webkit-font-smoothing: antialiased;
+    background: none;
+}
+.project-tagline {
+  color: #74b1be!important;
+}
+.main-content h1, h2, h3 {
+    color: #20515b !important;
+}
+
+.facebook {
+  padding: 10px;
+  padding-bottom: 2px;
+}
+
+.facebook img {
+  width: 30px;
+  padding: 2px;
+}
+
+.facebook span {
+  vertical-align: top;
+}
+
+.telegram {
+  padding: 10px;
+  padding-bottom: 2px;
+}
+
+.telegram img {
+  width: 30px;
+  padding: 2px;
+}
+.telegram span {
+  vertical-align: top;
+  padding: 5px;
+}

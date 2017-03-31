@@ -1,3 +1,15 @@
-theme: jekyll-theme-cayman
-title: Flickr Photos Bot
-description: The shows you photos from flickr for a given location or person.
+title: Flickr Photos
+tagline: The bot shows you photos from flickr for a given location or person.
+author:
+  name : Recime Inc
+  url : "https://recime.io"
+
+# Gems
+gems:
+  - jekyll-paginate
+
+#Others
+markdown: kramdown
+
+sass:
+    sass_dir: _sass

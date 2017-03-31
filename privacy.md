@@ -1,3 +1,10 @@
+---
+layout: default
+title:  "Terms of Service"
+date:   2017-03-30 17:50:00
+categories: legal
+---
+
 # PRIVACY POLICY
 This privacy policy governs your use of the software application Flickr Bot  [https://www.facebook.com/Flickr-Bot-769372433211496/](https://www.facebook.com/Flickr-Bot-769372433211496/) (“Application”) for Facebook Messenger that was created by Recime Inc. The Application allows Facebook users to request photos of cities and famous people from flickr.com.
 User Provided Information
