@@ -21,7 +21,7 @@ If you have an idea for improvement, want to fix some issues, fork the `github` 
 
 # Setup
 
-Once you have cloned the repo and have created configured `Recime` Command Line Tool. You can test it by following the instructions below:
+Once you have cloned the repo and have created configured [Recime Command Line Tool](https://docs.recime.io/installation.html). You can test it by following the instructions below:
 
 ## Set Flickr API KEY
 
