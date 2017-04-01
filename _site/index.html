@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
+  
   <head>
   <meta charset="UTF-8">
   <title>Flickr Bot</title>
@@ -18,7 +18,7 @@
 
   <body>
     <section class="page-header recime-page-header">
-  <img class="project-icon" src="/icon.png"/>
+  <img class="project-icon" width="80" src="/icon.png"/>
   <h1 class="project-name">Flickr Bot</h1>
   <h2 class="project-tagline">The bot sends you photos of cities and famous people.</h2>
   <a href="https://m.me/769372433211496" class="btn facebook">
@@ -30,7 +30,7 @@
 
 
     <section class="main-content">
-
+      
       <h1 id="getting-started">Getting Started</h1>
 
 <p>This bot shows you images tagged in flickr for a given person or location. Example of messages that can be sent to it are:</p>
@@ -45,11 +45,11 @@
 <!-- Place this tag where you want the button to render. -->
 <p><a class="github-button" href="https://github.com/Recime/recime-flickr-bot/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-aria-label="# forks on GitHub" aria-label="Fork Recime/recime-flickr-bot on GitHub">Fork on Github</a></p>
 
-<h1 id="setup">Setup</h1>
+<h1 id="deploy-from-source">Deploy from Source</h1>
 
-<p>Once you have cloned the repo and have created configured <code class="highlighter-rouge">Recime</code> Command Line Tool. You can test it by following the instructions below:</p>
+<p>Once you have cloned the repo and have created configured <a href="https://docs.recime.io/installation.html">Recime Command Line Tool</a>. You can test it by following the instructions below:</p>
 
-<h2 id="set-flickr-api-key">Set Flickr API KEY</h2>
+<h2 id="setting-the-api_key">Setting the API_KEY</h2>
 
 <p>In order to make photos queries in flickr, first get your flickr API key from:<br />
 <a href="https://www.flickr.com/services/apps/create/"><code class="highlighter-rouge">https://www.flickr.com/services/apps/create/</code></a>.</p>
@@ -73,6 +73,10 @@
 
 <p>Now copy/paste your platform specific Access Token you have have copied earlier.</p>
 
+<p>The bots uses <a href="https://api.ai">api.ai</a> for natural language processing. Please checkout the <a href="https://docs.recime.io/api-ai-nlp.html">documentation</a> on how to enable it for your instance.</p>
+
+<p><img src="images/api-ai.png" alt="" /></p>
+
 <h2 id="deploy">Deploy</h2>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>  recime-cli deploy
@@ -82,26 +86,26 @@
 
 <p>This will build the bot, install any missing dependencies and give you the live url of the bot:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>bash-3.2$ recime-cli deploy
-INFO: Installing dependencies.
-&gt; alan-turing@1.0.1 preinstall /steve/bot/Turing
-&gt; npm install -g typescript
-/usr/local/bin/tsc -&gt; /usr/local/lib/node_modules/typescript/bin/tsc
-/usr/local/bin/tsserver -&gt; /usr/local/lib/node_modules/typescript/bin/tsserver
-/usr/local/lib
-└── typescript@2.0.8
-&gt; alan-turing@1.0.1 build /Users/newrecimeuser/Source/Recime/bot/Turing
-&gt; tsc
-INFO: Preparing.
-INFO: Compressing.
-INFO: Preparing to upload.
+<div class="highlighter-rouge"><pre class="highlight"><code>bash-3.2$ recime-cli deploy                                                                
+INFO: Installing dependencies.                                                                                                                                       
+&gt; alan-turing@1.0.1 preinstall /steve/bot/Turing                      
+&gt; npm install -g typescript                                                                                                                                          
+/usr/local/bin/tsc -&gt; /usr/local/lib/node_modules/typescript/bin/tsc                       
+/usr/local/bin/tsserver -&gt; /usr/local/lib/node_modules/typescript/bin/tsserver             
+/usr/local/lib                                                                             
+└── typescript@2.0.8                                                                                                                                                       
+&gt; alan-turing@1.0.1 build /Users/newrecimeuser/Source/Recime/bot/Turing                           
+&gt; tsc                                                                                                                                                                             
+INFO: Preparing.                                                                           
+INFO: Compressing.                                                                         
+INFO: Preparing to upload.                                                                 
 28.18 KB / 28.18 KB [#########################################################] 100.00% 0s
-INFO: Finalizing.
-\
-=&gt; https://us-west-1-bot.recime.io/bot/50d122fd3204e67f3a6452ba28b522da/v1
+INFO: Finalizing.                                                                          
+\                                                                                          
+=&gt; https://us-west-1-bot.recime.io/bot/50d122fd3204e67f3a6452ba28b522da/v1                                
 
-INFO: Bot publish successful.
-For any questions and feedback, please reach us at hello@recime.io.
+INFO: Bot publish successful.                                                                                                                                           
+For any questions and feedback, please reach us at hello@recime.io.                                                                                            
 bash-3.2$
 
 </code></pre>

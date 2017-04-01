@@ -43,3 +43,7 @@
   vertical-align: top;
   padding: 5px;
 }
+
+.main-content img {
+  max-width: 150px;
+}

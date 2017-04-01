@@ -19,11 +19,11 @@ If you have an idea for improvement, want to fix some issues, fork the `github` 
 <!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/Recime/recime-flickr-bot/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-aria-label="# forks on GitHub" aria-label="Fork Recime/recime-flickr-bot on GitHub">Fork on Github</a>
 
-# Setup
+# Deploy from Source
 
 Once you have cloned the repo and have created configured [Recime Command Line Tool](https://docs.recime.io/installation.html). You can test it by following the instructions below:
 
-## Set Flickr API KEY
+## Setting the API_KEY
 
 In order to make photos queries in flickr, first get your flickr API key from:  
 [`https://www.flickr.com/services/apps/create/`](https://www.flickr.com/services/apps/create/).
@@ -49,6 +49,9 @@ Configure your bot by typing the following command:
 
 Now copy/paste your platform specific Access Token you have have copied earlier.
 
+The bots uses [api.ai](https://api.ai) for natural language processing. Please checkout the [documentation](https://docs.recime.io/api-ai-nlp.html) on how to enable it for your instance.
+
+![](images/api-ai.png)
 
 ## Deploy
 
